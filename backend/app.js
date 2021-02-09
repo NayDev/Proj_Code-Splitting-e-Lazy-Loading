@@ -9,6 +9,12 @@ app.get('/products', (req, res) => {
       res.json(result ? result : error);
     });
   });
+
+app.get('/stores', (req, res) => {
+  connectionMysql.query('SELECT * from lojas', (error, result) => {
+    res.json(result ? result : error);
+  });
+});
   
   app.get('/mensagens', async (req, res) => {
     res.json(await mensagensModel.find());

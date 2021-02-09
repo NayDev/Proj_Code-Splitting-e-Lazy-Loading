@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 export default function Produtos() {
   const [produtos, setProdutos] = useState([]);
